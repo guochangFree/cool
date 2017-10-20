@@ -10,33 +10,17 @@ java.lang.reflect 包下 interface Member 类
  
  public static final int PRIVATE          = 0x00000002;
  
- public static final int PROTECTED        = 0x00000004;
- 
  public static final int STATIC           = 0x00000008;
  
  public static final int FINAL            = 0x00000010;
  
  public static final int SYNCHRONIZED     = 0x00000020;
- 
- public static final int VOLATILE         = 0x00000040;
- 
- public static final int TRANSIENT        = 0x00000080;
- 
- public static final int NATIVE           = 0x00000100;
- 
- public static final int INTERFACE        = 0x00000200;
- 
- public static final int ABSTRACT         = 0x00000400;
- 
- public static final int STRICT           = 0x00000800;
  ...
   
- int Member.getModifers(); // 返回上面的int值
- 例如
- Feild 类 
- public int getModifiers() {
-    return modifiers;
- }
+ int mod Member.getModifers(); // 返回上面的int值
+ Modifers.isPublic(int mod); // 根据mod值判断是否为public
+ 还有其他一些方法：
+ ![Member子类](https://github.com/guochangFree/my-rpc/raw/master/image/modifers.png)
  
  
  
