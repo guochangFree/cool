@@ -3,4 +3,4 @@
 先说点其他的
 java.lang.reflect 包下 interface Member 类
 
-![image](https://github.com/ButBueatiful/dotvim/raw/master/screenshots/vim-screenshot.jpg)
+![image](https://github.com/guochangFree/my-rpc/tree/master/image/S0KXF}~SUN06{2_PQKA}570.png)
