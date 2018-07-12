@@ -129,8 +129,9 @@ public class NetUtils {
     }
 
     static boolean isValidAddress(InetAddress address) {
-        if (address == null || address.isLoopbackAddress()){
-            return false;}
+        if (address == null || address.isLoopbackAddress()) {
+            return false;
+        }
         String name = address.getHostAddress();
         return (name != null
                 && !ANYHOST.equals(name)
@@ -171,8 +172,9 @@ public class NetUtils {
      * @return first valid local IP
      */
     public static InetAddress getLocalAddress() {
-        if (LOCAL_ADDRESS != null){
-            return LOCAL_ADDRESS;}
+        if (LOCAL_ADDRESS != null) {
+            return LOCAL_ADDRESS;
+        }
         InetAddress localAddress = getLocalAddress0();
         LOCAL_ADDRESS = localAddress;
         return localAddress;
@@ -274,8 +276,9 @@ public class NetUtils {
         StringBuilder sb = new StringBuilder();
         sb.append(protocol).append("://");
         sb.append(host).append(':').append(port);
-        if (path.charAt(0) != '/'){
-            sb.append('/');}
+        if (path.charAt(0) != '/') {
+            sb.append('/');
+        }
         sb.append(path);
         return sb.toString();
     }
