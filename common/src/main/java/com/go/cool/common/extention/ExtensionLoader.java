@@ -18,7 +18,6 @@ package com.go.cool.common.extention;
 
 
 import com.go.cool.common.Constants;
-import com.go.cool.common.Extension;
 import com.go.cool.common.URL;
 import com.go.cool.common.compiler.Compiler;
 import com.go.cool.common.extention.support.ActivateComparator;
@@ -714,15 +713,11 @@ public class ExtensionLoader<T> {
 
     @SuppressWarnings("deprecation")
     private String findAnnotationName(Class<?> clazz) {
-        Extension extension = clazz.getAnnotation(Extension.class);
-        if (extension == null) {
-            String name = clazz.getSimpleName();
-            if (name.endsWith(type.getSimpleName())) {
-                name = name.substring(0, name.length() - type.getSimpleName().length());
-            }
-            return name.toLowerCase();
+        String name = clazz.getSimpleName();
+        if (name.endsWith(type.getSimpleName())) {
+            name = name.substring(0, name.length() - type.getSimpleName().length());
         }
-        return extension.value();
+        return name.toLowerCase();
     }
 
     @SuppressWarnings("unchecked")
